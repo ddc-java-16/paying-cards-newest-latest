@@ -1,7 +1,5 @@
 package edu.cnm.deepdive.cards.model;
 
-import java.awt.Color;
-
 @SuppressWarnings("UnnecessaryUnicodeEscape")
 public enum Suit {
   CLUBS('\u2663', Color.BLACK),
@@ -25,7 +23,7 @@ public enum Suit {
     return color;
   }
 
-  public enum color {
+  public enum Color {
     BLACK, RED
   }
 }
