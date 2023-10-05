@@ -9,9 +9,7 @@ import java.util.List;
 
 public class PileView {
 
-  public static final Comparator<Card> COLOR_SUIT_RANK_COMPARATOR = new Comparator<Card>() {
-    @Override
-    public int compare(Card card1, Card card2) {
+  public static final Comparator<Card> COLOR_SUIT_RANK_COMPARATOR = (card1, card2) -> {
       Suit suit1 = card1.getSuit();
       Suit suit = card2.getSuit();
       int comparison = suit1.getColor().compareTo(suit.getColor());
@@ -19,9 +17,7 @@ public class PileView {
         comparison = card1.getRank().compareTo(card2.getRank());
       }
       return comparison;
-    }
-
-  };
+    };
 
   public String render(List<Card> cards, Color color) {
     List<Card> sortedCards = new ArrayList<>(cards);
